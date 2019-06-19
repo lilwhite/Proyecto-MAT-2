@@ -7,6 +7,10 @@ Primero procederemos a crear el Workspace sobre el grupo de recursos:
 
 <a align="center"><img src="https://i.imgur.com/C6mEn9jh.png?1" title="Workspace" /></a>
 
+Para que recoja los datos de los accesos, deberemos de recopilarlos a través de "Log Analytics", por lo que nos dirigiremos a Azure Active Directory, al apartado de "Sign-Ins":
+
+<a align="center"><img src="https://i.imgur.com/hR8Krla.png" title="Sign-Ins" /></a>
+
 Una vez creado, realizaremos la búsqueda sobre los "Signinlogs" de los usuarios de sistemas, para lo que ejecutaremos la siguiente Query:
 
 ```Kusto
