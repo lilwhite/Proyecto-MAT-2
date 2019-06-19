@@ -3,4 +3,4 @@ El inicio de sesión de cualquiera de estos usuarios debe quedar registrado y lo
 
 Primero procederemos a crear el Workspace sobre el grupo de recursos:
 
-<a><img src="https://i.imgur.com/C6mEn9jl.png" title="source: imgur.com" /></a>
+<a><img src="https://i.imgur.com/C6mEn9jb.png?1" title="source: imgur.com" /></a>
