@@ -36,5 +36,5 @@ Con ello, lograremos que nos aparezcan los usuarios de sistemas que han accedido
 Una vez que tenemos la query seleccionada, pulsaremos en crear nueva alerta.
 
 <p align="center">
-<a><img src="https://i.imgur.com/bz93Rzbh.png" title="alerta" /></a>
+  <a><img src="https://i.imgur.com/bz93Rzbh.png" title="alerta" /></a>
 </p>
