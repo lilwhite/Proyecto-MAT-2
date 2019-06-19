@@ -5,7 +5,9 @@ El inicio de sesión de cualquiera de estos usuarios debe quedar registrado y lo
 
 Primero procederemos a crear el Workspace sobre el grupo de recursos:
 
-<a align="center"><img src="https://i.imgur.com/C6mEn9jh.png?1" title="Workspace" /></a>
+<p align="center">
+  <a><img src="https://i.imgur.com/C6mEn9jh.png?1" title="Workspace" /></a>
+</p>
 
 Para que recoja los datos de los accesos, deberemos de recopilarlos a través de "Log Analytics", por lo que nos dirigiremos a Azure Active Directory, al apartado de "Sign-Ins":
 
@@ -13,7 +15,9 @@ Para que recoja los datos de los accesos, deberemos de recopilarlos a través de
 
 A continuación exportaremos estos datos desde "Export Data Settings" a nuestro Workspace de Log Analytics:
 
-<a align="center"><img src="https://i.imgur.com/EB8LqcS.png" title="DataSettings" /></a>
+<p align="center">
+  <a><img src="https://i.imgur.com/EB8LqcS.png" title="DataSettings" /></a>
+</p>
 
 Una vez creado, realizaremos la búsqueda sobre los "Signinlogs" de los usuarios de sistemas, para lo que ejecutaremos la siguiente Query:
 
@@ -21,7 +25,9 @@ Una vez creado, realizaremos la búsqueda sobre los "Signinlogs" de los usuarios
 SigninLogs
 | where Identity like "sys"
 ```
-<a align="center"><img src="https://i.imgur.com/J5QAypzh.png" title="Logs" /></a>
+<p align="center">
+<a><img src="https://i.imgur.com/J5QAypzh.png" title="Logs" /></a>
+</p>
 
 Con ello, lograremos que nos aparezcan los usuarios de sistemas que han accedido a nuestro dominio.
 
@@ -29,4 +35,6 @@ Con ello, lograremos que nos aparezcan los usuarios de sistemas que han accedido
 
 Una vez que tenemos la query seleccionada, pulsaremos en crear nueva alerta.
 
-<a align="center"><img src="https://i.imgur.com/bz93Rzbh.png" title="alerta" /></a>
+<p align="center">
+<a><img src="https://i.imgur.com/bz93Rzbh.png" title="alerta" /></a>
+</p>
