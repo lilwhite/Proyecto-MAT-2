@@ -11,6 +11,10 @@ Para que recoja los datos de los accesos, deberemos de recopilarlos a través de
 
 <a align="center"><img src="https://i.imgur.com/hR8Krla.png" title="Sign-Ins" /></a>
 
+A continuación exportaremos estos datos desde "Export Data Settings" a nuestro Workspace de Log Analytics:
+
+<a align="center"><img src="https://i.imgur.com/EB8LqcS.png" title="DataSettings" /></a>
+
 Una vez creado, realizaremos la búsqueda sobre los "Signinlogs" de los usuarios de sistemas, para lo que ejecutaremos la siguiente Query:
 
 ```Kusto
