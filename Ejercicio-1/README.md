@@ -19,7 +19,7 @@ A continuación exportaremos estos datos desde "Export Data Settings" a nuestro 
   <a><img src="https://i.imgur.com/EB8LqcS.png" title="DataSettings" /></a>
 </p>
 
-Una vez creado, realizaremos la búsqueda sobre los "Signinlogs" de los usuarios de sistemas, para lo que ejecutaremos la siguiente Query:
+Una vez que se exporten los datos (puede que tarde un tiempo), realizaremos la búsqueda sobre los "Signinlogs" de los usuarios de sistemas, para lo que ejecutaremos la siguiente Query:
 
 ```Kusto
 SigninLogs
