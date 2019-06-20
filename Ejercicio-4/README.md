@@ -64,3 +64,9 @@ Seleccionaremos la tabla de "stock" por ejemplo, para realizar la prueba:
 <p align="center">
   <a><img src="https://i.imgur.com/uFpWVtM.png" title="source: imgur.com" /></a>
 </p>
+
+A continuación se creará dentro de nuestra suscripción el servidor de SQL:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/SIJODNp.png" title="azure" /></a>
+</p>
