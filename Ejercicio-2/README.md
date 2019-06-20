@@ -192,3 +192,15 @@ Para la obtención de los datos de la reproducción del vídeo, deberemos dirigi
 <p align="center">
   <a><img src="https://i.imgur.com/fTdnHUnh.png" title="cnd" /></a>
 </p>
+
+Una vez dentro nos dirigiremos a Analytics:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/tGnJBA4h.png" title="Analytics" /></a>
+</p>
+
+Sobre "Hits" podremos ver el número de solicitudes que se han realizado:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/33tDzxNh.png" title="hits" /></a>
+</p>
