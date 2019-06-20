@@ -42,11 +42,19 @@ Una vez que tenemos la query seleccionada, pulsaremos en crear nueva alerta.
 Haciendo esto, la alerta la activará a la hora de recibir cualquier registro de un usuario de sistemas en nuestro sistema.
 
 <p align="center">
-<a href="https://imgur.com/ugiWaMq"><img src="https://i.imgur.com/ugiWaMqh.png" title="condicion" /></a>
+<a><img src="https://i.imgur.com/ugiWaMqh.png" title="condicion" /></a>
 </p>
 
 El grupo de acción que tenemos creado para asociar a la alerta, nos enviará un correo por cada registro creado:
 
 <p align="center">
-<a href="https://imgur.com/Cxx5tSj"><img src="https://i.imgur.com/Cxx5tSjh.png" title="registro" /></a>
+<a><img src="https://i.imgur.com/Cxx5tSjh.png" title="registro" /></a>
+</p>
+
+## Prueba de envío de correo
+
+A continuación veremos la rececpción del correo al generarse una de las alertas. Accederemos con uno de los usuarios creados para el departamento de sistemas:
+
+<p align="center">
+<a><img src="https://i.imgur.com/5DDqD4Xh.png" title="sysmat" /></a>
 </p>
