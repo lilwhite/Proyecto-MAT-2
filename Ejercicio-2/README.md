@@ -28,5 +28,14 @@ Dentro de nuestro grupo de recursos, crearemos una nueva cuenta de almacenamient
 az storage account create -n samat02t38w03ams --kind StorageV2 --sku Standard_LRS -l eastus -g RG-Ejercicio2
 ```
 <p align="center">
-<a><img src="https://i.imgur.com/8y8YIRQh.png" title="source: imgur.com" /></a>
+<a><img src="https://i.imgur.com/8y8YIRQh.png" title="cuenta almacenamiento" /></a>
+</p>
+
+### Creación de una cuenta de Azure Media Services
+
+```PowerShell
+az ams account create --n amsmat02t38w03 -g RG-Ejercicio2 --storage-account samat02t38w03ams -l eastus
+```
+<p align="center">
+<a><img src="https://i.imgur.com/a31xoiHh.png" title="AMS" /></a>
 </p>
