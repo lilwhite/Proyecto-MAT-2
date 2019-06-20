@@ -62,3 +62,26 @@ az ams streaming-endpoint start -n corporate -a amsmat02t38w03 -g RG-Ejercicio2
 <p align="center">
   <a><img src="https://i.imgur.com/lRgwFFkh.png" title="startJob" /></a>
 </p>
+
+### Creación de una transformación para la codificación de velocidad de bits adaptable
+
+Mediante la transformación lograremos realizar la codificación del vídeo para su correcta publicación:
+
+```PowerShell
+az ams transform create --name testEncodingTransform --preset AdaptiveStreaming --description 'a simple Transform for Adaptive Bitrate Encoding' -g RG-Ejercicio2 -a amsmat02t38w03
+```
+<p align="center">
+<a"><img src="https://i.imgur.com/mUvCDhYh.png" title="transform" /></a>
+</p>
+
+### Creación de un recurso de salida
+
+Una vez que tengamos el trabajo de codificación deberemos de darle una salida dentro del Media Service.
+
+```PowerShell
+az ams asset create -n testOutputAssetName -a amsmat02t38w03 -g RG-Ejercicio2
+```
+
+<p align="center">
+<a><img src="https://i.imgur.com/lQXQvZsh.png" title="assets" /></a>
+</p>
