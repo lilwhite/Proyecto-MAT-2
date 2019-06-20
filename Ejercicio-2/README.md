@@ -180,7 +180,15 @@ Para realizar la prueba de la reproducción del vídeo lo haremos a través de A
 https://aka.ms/azuremediaplayer/
 
 <p align="center">
-  <a><img src="https://i.imgur.com/U4M4uFD.png" title="source:azuremediaplayer" /></a>
+  <a><img src="https://i.imgur.com/U4M4uFD.png" title="azuremediaplayer" /></a>
 </p>
 
 En la URL introduciremos nuestra dirección generada por el Media Service para su reproducción.
+
+## Control de número de visualizaciones
+
+Para la obtención de los datos de la reproducción del vídeo, deberemos dirigirnos al CDN endpoint de la cuenta de Media Service, y acceder a las opciones avanzadas. Una vez ahí, pulsaremos en Manage para que nos redirija al portal de Verizon:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/fTdnHUnh.png" title="cnd" /></a>
+</p>
