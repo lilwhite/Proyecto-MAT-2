@@ -54,6 +54,11 @@ Antes de crear el punto de conexión debemos de tener en cuenta que se nos pide 
   <a><img src="https://i.imgur.com/fEcwdFih.png" title="endpoint" /></a>
 </p>
 
+Una vez que tengamos el endpoint ya creado, podemos iniciarlo:
+
 ```PowerShell
-az ams streaming-endpoint start  -n default -a amsaccount -g RG-Ejercicio2
+az ams streaming-endpoint start -n corporate -a amsmat02t38w03 -g RG-Ejercicio2
 ```
+<p align="center">
+  <a><img src="https://i.imgur.com/lRgwFFkh.png" title="startJob" /></a>
+</p>
