@@ -1,3 +1,6 @@
+<!-- DASH-AVC/265 reference implementation -->
+    < script src="js/dash.all.js"></script>
+
 # Ejercicio 2
 
 La  organización  quiere  publicar  un  vídeo  corporativo  y  para  esto  va  a  utilizar  Azure Media Services. Debes implementar la infraestructura necesaria para que este vídeo pueda  ser  visualizado  desde  cualquier  dispositivo  (incluyendo  dispositivos  móviles) mediante   Azure  Services.  La  empresa   quiere   llevar  un  control  del  número  de visualizaciones del vídeo que se han llevado a cabo.
@@ -172,3 +175,27 @@ corporate-amsmat02t38w03-usea.streaming.media.azure.net
 ```PowerShell
 https://corporate-amsmat02t38w03-usea.streaming.media.azure.net/5c6be9b8-f606-4af8-adcf-07bdc8a42f0c/vaporwave.ism/manifest(format=m3u8-aapl)
 ```
+
+### Prueba de reproducción con Azure Media Player
+
+Para realizar la prueba de la reproducción del vídeo lo haremos a través de Azure Media Player:
+
+https://aka.ms/azuremediaplayer/
+
+<p align="center">
+  <a><img src="https://i.imgur.com/U4M4uFD.png" title="source:azuremediaplayer" /></a>
+</p>
+
+En la URL introduciremos nuestra dirección generada por el Media Service, y
+
+<script>
+    // setup the video element and attach it to the Dash player
+    function setupVideo() {
+      var url = "https://corporate-amsmat02t38w03-usea.streaming.media.azure.net/5c6be9b8-f606-4af8-adcf-07bdc8a42f0c/vaporwave.ism/manifest(format=m3u8-aapl)";
+      var context = new Dash.di.DashContext();
+      var player = new MediaPlayer(context);
+                      player.startup();
+                      player.attachView(document.querySelector("#videoplayer"));
+                      player.attachSource(url);
+    }
+    </script>
