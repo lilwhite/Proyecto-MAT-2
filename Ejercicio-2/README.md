@@ -47,11 +47,11 @@ Como vemos en la salida, el comando "ams" se encuentra en preview, por lo que en
 Antes de crear el punto de conexión debemos de tener en cuenta que se nos pide que se pueda visualizar el número de visualizaciones que se han llevado a cabo, por lo que deberemos de publicar los servicios de CDN de Premium de Verizon, que son los que nos permiten mostrar esta información. Para ello nos dirigiremos a la cuenta de AMS y crearemos un nuevo "streaming endpoint".
 
 <p align="center">
-  <a><img src="https://i.imgur.com/itqkmlMh.png" title="source: imgur.com" /></a>
+  <a><img src="https://i.imgur.com/itqkmlMh.png" title="streaming" /></a>
 </p>
 
 <p align="center">
-  <a><img src="https://i.imgur.com/fEcwdFih.png" title="source: imgur.com" /></a>
+  <a><img src="https://i.imgur.com/fEcwdFih.png" title="endpoint" /></a>
 </p>
 
 ```PowerShell
