@@ -137,3 +137,12 @@ az ams streaming-locator create -n testStreamingLocator --asset-name testOutputA
 <p align="center">
   <a><img src="https://i.imgur.com/9X2kHP7h.png" title="source:salida" /></a>
 </p>
+
+### Obtención de las rutas de acceso del localizador de streaming
+
+```PowerShell
+az ams streaming-locator get-paths -a amsmat02t38w03 -g RG-Ejercicio2 -n testStreamingLocator
+```
+<p align="center">
+  <a><img src="https://i.imgur.com/ie9jXbqh.png" title="source:locator" /></a>
+</p>
