@@ -28,3 +28,25 @@ Para realizar el ejercicio, descargaremos una base de datos de ejemplo. En este 
 https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0
 
 De aquí, nos descargaremos la base de datos "WideWorldImporters-Standard.bak"
+
+A continuación, accederemos a SQL Server Management Studio para realizar la importación de la base de datos. Conectaremos con el servidor local:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/zGuUhQ8.png" title="SQL" /></a>
+</p>
+
+Seleccionaremos restaurar la base de datos:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/reEoOI6.png" title="restore" /></a>
+</p>
+
+Buscamos dónde hemos almacenado el archivo .bak:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/bEgEH1T.png" title="source: imgur.com" /></a>
+</p>
+
+<p align="center">
+  <a><img src="https://i.imgur.com/6FQXUr5.png" title="source: imgur.com" /></a>
+</p>
