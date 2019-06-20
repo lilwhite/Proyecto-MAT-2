@@ -105,3 +105,7 @@ A continuación le indicaremos a la cuenta de Media Service, que queremos inicia
 <p align="center">
   <a><img src="https://i.imgur.com/U4kPaIHh.png" title="container" /></a>
 </p>
+
+```PowerShell
+az ams job start --name testJob001 --transform-name testEncodingTransform --base-uri 'https://samat02t38w03ams.blob.core.windows.net/videos/' --files 'vaporwave.mp4' --output-assets testOutputAssetName= -a amsmat02t38w03 -g RG-Ejercicio2
+```
