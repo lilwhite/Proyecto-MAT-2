@@ -71,7 +71,7 @@ Mediante la transformación lograremos realizar la codificación del vídeo para
 az ams transform create --name testEncodingTransform --preset AdaptiveStreaming --description 'a simple Transform for Adaptive Bitrate Encoding' -g RG-Ejercicio2 -a amsmat02t38w03
 ```
 <p align="center">
-<a"><img src="https://i.imgur.com/mUvCDhYh.png" title="transform" /></a>
+  <a"><img src="https://i.imgur.com/mUvCDhYh.png" title="transform" /></a>
 </p>
 
 ### Creación de un recurso de salida
@@ -83,11 +83,25 @@ az ams asset create -n testOutputAssetName -a amsmat02t38w03 -g RG-Ejercicio2
 ```
 
 <p align="center">
-<a><img src="https://i.imgur.com/lQXQvZsh.png" title="assets" /></a>
+  <a><img src="https://i.imgur.com/lQXQvZsh.png" title="assets" /></a>
 </p>
 
 Con ello, comprobaremos que se crea un contenedor dentro de nuestra cuenta de almacenamiento, que contendrá un contenedor privado, para la posterior codificación del vídeo.
 
 <p align="center">
-<a><img src="https://i.imgur.com/fsL1jAPh.png" title="assets1" /></a>
+  <a><img src="https://i.imgur.com/fsL1jAPh.png" title="assets1" /></a>
+</p>
+
+Posteriormente, crearemos un nuevo contenedor (tipo container) dentro de nuestra cuenta de almacenamiento para subir el video que queremos publicar.
+
+<p align="center">
+  <a><img src="https://i.imgur.com/GUaMjjch.png" title="videos" /></a>
+</p>
+
+### Inicio de un trabajo mediante la entrada HTTPS
+
+A continuación le indicaremos a la cuenta de Media Service, que queremos iniciar el trabajo especificándole la URL del video de nuestro contenedor.
+
+<p align="center">
+  <a><img src="https://i.imgur.com/U4kPaIHh.png" title="container" /></a>
 </p>
