@@ -50,3 +50,11 @@ Buscamos dónde hemos almacenado el archivo .bak:
 <p align="center">
   <a><img src="https://i.imgur.com/6FQXUr5.png" title="source: imgur.com" /></a>
 </p>
+
+## Strech Database
+
+Mediante el Strech Database lograremos seleccionar las tablas que queremos mover a Azure.
+
+<p align="center">
+  <a><img src="https://i.imgur.com/RUtcrGR.png" title="strech" /></a>
+</p>
