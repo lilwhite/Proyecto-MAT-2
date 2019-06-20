@@ -146,3 +146,29 @@ az ams streaming-locator get-paths -a amsmat02t38w03 -g RG-Ejercicio2 -n testStr
 <p align="center">
   <a><img src="https://i.imgur.com/ie9jXbqh.png" title="source:locator" /></a>
 </p>
+
+Copiaremos la ruta de acceso a streaming en vivo (HLS), en este caso:
+
+```PowerShell
+/5c6be9b8-f606-4af8-adcf-07bdc8a42f0c/vaporwave.ism/manifest(format=m3u8-aapl)
+```
+
+### Creación de la dirección URL
+
+Deberemos obtener el nombre del host del punto de conexión del streaming:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/QQQBAN8.png" title="hostname" /></a>
+</p>
+
+```PowerShell
+corporate-amsmat02t38w03-usea.streaming.media.azure.net
+```
+
+#### Ensamblado de la dirección URL
+
+"https:// " + <valor de hostName> + <valor de ruta de acceso de HLS>
+
+```PowerShell
+https://corporate-amsmat02t38w03-usea.streaming.media.azure.net//5c6be9b8-f606-4af8-adcf-07bdc8a42f0c/vaporwave.ism/manifest(format=m3u8-aapl)
+```
