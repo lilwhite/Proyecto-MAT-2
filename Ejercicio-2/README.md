@@ -85,3 +85,9 @@ az ams asset create -n testOutputAssetName -a amsmat02t38w03 -g RG-Ejercicio2
 <p align="center">
 <a><img src="https://i.imgur.com/lQXQvZsh.png" title="assets" /></a>
 </p>
+
+Con ello, comprobaremos que se crea un contenedor dentro de nuestra cuenta de almacenamiento, que contendrá un contenedor privado, para la posterior codificación del vídeo.
+
+<p align="center">
+<a><img src="https://i.imgur.com/fsL1jAPh.png" title="assets1" /></a>
+</p>
