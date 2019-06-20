@@ -19,3 +19,14 @@ az group create -n RG-Ejercicio2 -l eastus
 <p align="center">
 <a><img src="https://i.imgur.com/4y31fV4h.png" title="recurso" /></a>
 </p>
+
+### Creación de cuenta de almacenamiento
+
+Dentro de nuestro grupo de recursos, crearemos una nueva cuenta de almacenamiento que nos servirá para almacenar los vídeos que vayamos a publicar, y como contenedor para la condificación del Media Service. Intentaremos crear todos los recursos dentro de la misma región para reducir los costes del tráfico generado.
+
+```PowerShell
+az storage account create -n samat02t38w03ams --kind StorageV2 --sku Standard_LRS -l eastus -g RG-Ejercicio2
+```
+<p align="center">
+<a><img src="https://i.imgur.com/8y8YIRQh.png" title="source: imgur.com" /></a>
+</p>
