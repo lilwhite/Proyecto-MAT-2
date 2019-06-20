@@ -39,3 +39,21 @@ az ams account create --n amsmat02t38w03 -g RG-Ejercicio2 --storage-account sama
 <p align="center">
 <a><img src="https://i.imgur.com/a31xoiHh.png" title="AMS" /></a>
 </p>
+
+Como vemos en la salida, el comando "ams" se encuentra en preview, por lo que en un futuro es posbile que sufra algún cambio.
+
+### Inicio del punto de conexión de streaming
+
+Antes de crear el punto de conexión debemos de tener en cuenta que se nos pide que se pueda visualizar el número de visualizaciones que se han llevado a cabo, por lo que deberemos de publicar los servicios de CDN de Premium de Verizon, que son los que nos permiten mostrar esta información. Para ello nos dirigiremos a la cuenta de AMS y crearemos un nuevo "streaming endpoint".
+
+<p align="center">
+  <a><img src="https://i.imgur.com/itqkmlMh.png" title="source: imgur.com" /></a>
+</p>
+
+<p align="center">
+  <a><img src="https://i.imgur.com/fEcwdFih.png" title="source: imgur.com" /></a>
+</p>
+
+```PowerShell
+az ams streaming-endpoint start  -n default -a amsaccount -g RG-Ejercicio2
+```
