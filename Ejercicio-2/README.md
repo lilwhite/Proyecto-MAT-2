@@ -128,3 +128,12 @@ Una vez finalizado el proceso, podremos observar en el contenedor de "assets" c�
 </p>
 
 ### Creación de un localizador de streaming y obtención de la ruta de acceso
+
+A continuación deberemos de poner el vídeo en un recurso de salida para que pueda ser consumido:
+
+```PowerShell
+az ams streaming-locator create -n testStreamingLocator --asset-name testOutputAssetName --streaming-policy-name Predefined_ClearStreamingOnly  -g RG-Ejercicio2 -a amsmat02t38w03
+```
+<p align="center">
+  <a><img src="https://i.imgur.com/9X2kHP7h.png" title="source:salida" /></a>
+</p>
