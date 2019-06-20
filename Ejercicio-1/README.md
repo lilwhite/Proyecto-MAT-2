@@ -38,3 +38,15 @@ Una vez que tenemos la query seleccionada, pulsaremos en crear nueva alerta.
 <p align="center">
   <a><img src="https://i.imgur.com/bz93Rzbh.png" title="alerta" /></a>
 </p>
+
+Haciendo esto, la alerta la activará a la hora de recibir cualquier registro de un usuario de sistemas en nuestro sistema.
+
+<p align="center">
+<a href="https://imgur.com/ugiWaMq"><img src="https://i.imgur.com/ugiWaMqh.png" title="condicion" /></a>
+</p>
+
+El grupo de acción que tenemos creado para asociar a la alerta, nos enviará un correo por cada registro creado:
+
+<p align="center">
+<a href="https://imgur.com/Cxx5tSj"><img src="https://i.imgur.com/Cxx5tSjh.png" title="registro" /></a>
+</p>
