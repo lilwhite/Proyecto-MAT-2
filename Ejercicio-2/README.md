@@ -120,3 +120,11 @@ Si nos dirigimos a la cuenta del Media Service, en "Jobs" podemos observar el es
 <p align="center">
   <a><img src="https://i.imgur.com/A5hFxueh.png" title="estado" /></a>
 </p>
+
+Una vez finalizado el proceso, podremos observar en el contenedor de "assets" cómo se ha realizado la codificación del video:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/WEBA0Wgh.png" title="codificacion" /></a>
+</p>
+
+### Creación de un localizador de streaming y obtención de la ruta de acceso
