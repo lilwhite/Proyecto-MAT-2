@@ -25,3 +25,9 @@ A continuación realizaremos el test de "Fail-Over" para comprobar su correcta r
 <p align="center">
   <a><img src="https://i.imgur.com/XsUHKxx.png" title="failover" /></a>
 </p>
+
+Una vez que finalice nos mostrará los estados de los trabajos realizados:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/D68pNfk.png" title="test" /></a>
+</p>
