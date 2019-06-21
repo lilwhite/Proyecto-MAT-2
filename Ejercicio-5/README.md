@@ -599,3 +599,11 @@ En filtros deberemos de introducir "/blobServices/default/containers/images/blob
 <p align="center">
   <a><img src="https://i.imgur.com/4u0Vgpb.png" title="filtros" /></a>
 </p>
+
+## Prueba final
+
+Una vez realizado todo el proceso, iremos a la dirección de nuestra Web App y comprobaremos que al cargar una imagen, esta se almacenará y se redimensionará automáticamente:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/Pbe0NOM.png" title="resize" /></a>
+</p>
