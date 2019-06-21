@@ -46,7 +46,7 @@ Obtendremos la siguiente salida:
   },
   "failoverInProgress": null,
   "geoReplicationStats": null,
-  "id": "/subscriptions/4988b69a-583b-4cf3-b9f6-15e562bd8a3f/resourceGroups/RG-WebApp/providers/Microsoft.Storage/storageAccounts/sawebmat02t38w03",
+  "id": "/subscriptions/****************************/resourceGroups/RG-WebApp/providers/Microsoft.Storage/storageAccounts/sawebmat02t38w03",
   "identity": null,
   "isHnsEnabled": null,
   "kind": "BlobStorage",
