@@ -593,3 +593,9 @@ Dejaremos la configuración como se indica en la siguiente imagen:
 <p align="center">
   <a><img src="https://i.imgur.com/t6y1xQZ.png" title="source: imgur.com" /></a>
 </p>
+
+En filtros deberemos de introducir "/blobServices/default/containers/images/blobs/"
+
+<p align="center">
+  <a><img src="https://i.imgur.com/4u0Vgpb.png" title="filtros" /></a>
+</p>
