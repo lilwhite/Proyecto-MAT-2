@@ -94,3 +94,9 @@ Una vez haya finalizado el proceso nos aparecerá el check list de las operacion
 <p align="center">
 <a><img src="https://i.imgur.com/ujtZxA8.png" title="check" /></a>
 </p>
+
+Desde el portal de Azure, comprobaremos que se han creado los recursos necesarios para el Strech Database:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/es6nlZN.png" title="source: imgur.com" /></a>
+</p>
