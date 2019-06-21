@@ -17,3 +17,11 @@ Una vez finalizado el proceso de replicación nos tendrá que aparecer que es es
 <p align="center">
   <a><img src="https://i.imgur.com/6yT8OXhh.png" title="secured" /></a>
 </p>
+
+## Test Fail-Over
+
+A continuación realizaremos el test de "Fail-Over" para comprobar su correcta replica:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/XsUHKxx.png" title="failover" /></a>
+</p>
