@@ -70,3 +70,21 @@ A continuación se creará dentro de nuestra suscripción el servidor de SQL:
 <p align="center">
   <a><img src="https://i.imgur.com/SIJODNp.png" title="azure" /></a>
 </p>
+
+Asignaremos una contraseña para la base de datos:
+
+<p align="center">
+<a><img src="https://i.imgur.com/wOE10fo.png" title="password" /></a>
+</p>
+
+Seleccionamos la opción de IP pública:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/ZYAtB0n.png" title="public" /></a>
+</p>
+
+Finalmente nos mostrará el resumen:
+
+<p align="center">
+<a><img src="https://i.imgur.com/20QIftf.png" title="resumen" /></a>
+</p>
