@@ -273,3 +273,285 @@ Obtendremos la siguiente salida:
   "type": "Microsoft.Web/sites/sourcecontrols"
 }
 ```
+
+## Configuración
+
+En esta parte configuraremos la Web App para que realice la carga de las imágenes que le pasaremos:
+
+```Bash
+az webapp config appsettings set --name $webapp --resource-group RG-WebApp \
+--settings AzureStorageConfig__AccountName=$blobStorageAccount \
+AzureStorageConfig__ImageContainer=images  \
+AzureStorageConfig__ThumbnailContainer=thumbnails \
+AzureStorageConfig__AccountKey=$blobStorageAccountKey
+```
+
+Obtendremos la siguiente salida:
+
+```Bash
+[
+  {
+    "name": "WEBSITE_NODE_DEFAULT_VERSION",
+    "slotSetting": false,
+    "value": "10.14"
+  },
+  {
+    "name": "AzureStorageConfig__AccountName",
+    "slotSetting": false,
+    "value": "sawebmat02t38w03"
+  },
+  {
+    "name": "AzureStorageConfig__ImageContainer",
+    "slotSetting": false,
+    "value": "images"
+  },
+  {
+    "name": "AzureStorageConfig__ThumbnailContainer",
+    "slotSetting": false,
+    "value": "thumbnails"
+  },
+  {
+    "name": "AzureStorageConfig__AccountKey",
+    "slotSetting": false,
+    "value": "*****************************************"
+  }
+]
+```
+
+## Event Grid
+
+Una vez que tenemos configurada la carga de imágenes en nuestra Web App, deberemos de configurar Event Grid, para poder automatizar el proceso de mover las imágenes de contenedores en nuestra cuenta de almacenamiento:
+
+Lo primero que tendremos que realizar es registrar el proveedor de Event Grid:
+
+```Bash
+az provider register --namespace Microsoft.EventGrid
+```
+
+Para la función que crearemos a continuación necesitaremos crear una cuenta de almacenamiento a parte:
+
+```Bash
+functionstorage=safunmat02t38w03
+
+az storage account create --name $functionstorage --location eastus \
+--resource-group RG-WebApp --sku Standard_LRS --kind storage
+```
+
+Obtendremos la siguiente salida:
+
+```Bash
+{
+  "accessTier": null,
+  "creationTime": "2019-06-21T16:42:09.095015+00:00",
+  "customDomain": null,
+  "enableAzureFilesAadIntegration": null,
+  "enableHttpsTrafficOnly": false,
+  "encryption": {
+    "keySource": "Microsoft.Storage",
+    "keyVaultProperties": null,
+    "services": {
+      "blob": {
+        "enabled": true,
+        "lastEnabledTime": "2019-06-21T16:42:09.235689+00:00"
+      },
+      "file": {
+        "enabled": true,
+        "lastEnabledTime": "2019-06-21T16:42:09.235689+00:00"
+      },
+      "queue": null,
+      "table": null
+    }
+  },
+  "failoverInProgress": null,
+  "geoReplicationStats": null,
+  "id": "/subscriptions/*****************************/resourceGroups/RG-WebApp/providers/Microsoft.Storage/storageAccounts/safunmat02t38w03",
+  "identity": null,
+  "isHnsEnabled": null,
+  "kind": "Storage",
+  "lastGeoFailoverTime": null,
+  "location": "eastus",
+  "name": "safunmat02t38w03",
+  "networkRuleSet": {
+    "bypass": "AzureServices",
+    "defaultAction": "Allow",
+    "ipRules": [],
+    "virtualNetworkRules": []
+  },
+  "primaryEndpoints": {
+    "blob": "https://safunmat02t38w03.blob.core.windows.net/",
+    "dfs": null,
+    "file": "https://safunmat02t38w03.file.core.windows.net/",
+    "queue": "https://safunmat02t38w03.queue.core.windows.net/",
+    "table": "https://safunmat02t38w03.table.core.windows.net/",
+    "web": null
+  },
+  "primaryLocation": "eastus",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "RG-WebApp",
+  "secondaryEndpoints": null,
+  "secondaryLocation": null,
+  "sku": {
+    "capabilities": null,
+    "kind": null,
+    "locations": null,
+    "name": "Standard_LRS",
+    "resourceType": null,
+    "restrictions": null,
+    "tier": "Standard"
+  },
+  "statusOfPrimary": "available",
+  "statusOfSecondary": null,
+  "tags": {},
+  "type": "Microsoft.Storage/storageAccounts"
+}
+```
+
+## Creación de una aplicación de función
+
+La función nos proporcionará un ámbito de ejecución sin ningún servidor. Para ello ejecutaremos el siguiente código:
+
+```Bash
+functionapp=safunmat02t38w03
+
+az functionapp create --name $functionapp --storage-account $functionstorage \
+--resource-group RG-WebApp --consumption-plan-location eastus
+```
+
+Obtendremos la siguiente salida:
+
+```Bash
+{
+  "availabilityState": "Normal",
+  "clientAffinityEnabled": false,
+  "clientCertEnabled": false,
+  "clientCertExclusionPaths": null,
+  "cloningInfo": null,
+  "containerSize": 1536,
+  "dailyMemoryTimeQuota": 0,
+  "defaultHostName": "safunmat02t38w03.azurewebsites.net",
+  "enabled": true,
+  "enabledHostNames": [
+    "safunmat02t38w03.azurewebsites.net",
+    "safunmat02t38w03.scm.azurewebsites.net"
+  ],
+  "geoDistributions": null,
+  "hostNameSslStates": [
+    {
+      "hostType": "Standard",
+      "ipBasedSslResult": null,
+      "ipBasedSslState": "NotConfigured",
+      "name": "safunmat02t38w03.azurewebsites.net",
+      "sslState": "Disabled",
+      "thumbprint": null,
+      "toUpdate": null,
+      "toUpdateIpBasedSsl": null,
+      "virtualIp": null
+    },
+    {
+      "hostType": "Repository",
+      "ipBasedSslResult": null,
+      "ipBasedSslState": "NotConfigured",
+      "name": "safunmat02t38w03.scm.azurewebsites.net",
+      "sslState": "Disabled",
+      "thumbprint": null,
+      "toUpdate": null,
+      "toUpdateIpBasedSsl": null,
+      "virtualIp": null
+    }
+  ],
+  "hostNames": [
+    "safunmat02t38w03.azurewebsites.net"
+  ],
+  "hostNamesDisabled": false,
+  "hostingEnvironmentProfile": null,
+  "httpsOnly": false,
+  "hyperV": false,
+  "id": "/subscriptions/*****************************/resourceGroups/RG-WebApp/providers/Microsoft.Web/sites/safunmat02t38w03",
+  "identity": null,
+  "inProgressOperationId": null,
+  "isDefaultContainer": null,
+  "isXenon": false,
+  "kind": "functionapp",
+  "lastModifiedTimeUtc": "2019-06-21T16:50:12.813333",
+  "location": "eastus",
+  "maxNumberOfWorkers": null,
+  "name": "safunmat02t38w03",
+  "outboundIpAddresses": "40.79.154.194,137.117.100.130,137.117.103.80,137.117.97.189,137.117.101.166",
+  "possibleOutboundIpAddresses": "40.79.154.194,137.117.100.130,137.117.103.80,137.117.97.189,137.117.101.166,137.117.98.138,137.117.99.211,137.117.97.27",
+  "redundancyMode": "None",
+  "repositorySiteName": "safunmat02t38w03",
+  "reserved": false,
+  "resourceGroup": "RG-WebApp",
+  "scmSiteAlsoStopped": false,
+  "serverFarmId": "/subscriptions/*****************************/resourceGroups/RG-WebApp/providers/Microsoft.Web/serverfarms/EastUSPlan",
+  "siteConfig": null,
+  "slotSwapStatus": null,
+  "state": "Running",
+  "suspendedTill": null,
+  "tags": null,
+  "targetSwapSlot": null,
+  "trafficManagerHostNames": null,
+  "type": "Microsoft.Web/sites",
+  "usageState": "Normal"
+}
+```
+
+A continuación deberemos de configurar la función ya que necesita de credenciales para su ejecución:
+
+```Bash
+blobStorageAccount=sawebmat02t38w03
+storageConnectionString=$(az storage account show-connection-string --resource-group RG-WebApp --name $blobStorageAccount --query connectionString --output tsv)
+
+az functionapp config appsettings set --name $functionapp --resource-group RG-WebApp \
+--settings AzureWebJobsStorage=$storageConnectionString THUMBNAIL_CONTAINER_NAME=thumbnails \
+THUMBNAIL_WIDTH=100 FUNCTIONS_EXTENSION_VERSION=~2
+```
+
+Obtendremos la siguiente salida:
+
+```Bash
+[
+  {
+    "name": "FUNCTIONS_EXTENSION_VERSION",
+    "slotSetting": false,
+    "value": "~2"
+  },
+  {
+    "name": "AzureWebJobsStorage",
+    "slotSetting": false,
+    "value": "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=sawebmat02t38w03;AccountKey=****************"
+  },
+  {
+    "name": "AzureWebJobsDashboard",
+    "slotSetting": false,
+    "value": "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=safunmat02t38w03;AccountKey=****************"
+  },
+  {
+    "name": "WEBSITE_NODE_DEFAULT_VERSION",
+    "slotSetting": false,
+    "value": "10.14.1"
+  },
+  {
+    "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+    "slotSetting": false,
+    "value": "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=safunmat02t38w03;AccountKey=****************"
+  },
+  {
+    "name": "WEBSITE_CONTENTSHARE",
+    "slotSetting": false,
+    "value": "safunmat02t38w03"
+  },
+  {
+    "name": "THUMBNAIL_CONTAINER_NAME",
+    "slotSetting": false,
+    "value": "thumbnails"
+  },
+  {
+    "name": "THUMBNAIL_WIDTH",
+    "slotSetting": false,
+    "value": "100"
+  }
+]
+```
+
+## Implementación del código de función
