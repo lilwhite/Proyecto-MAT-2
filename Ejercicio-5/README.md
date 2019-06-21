@@ -555,3 +555,41 @@ Obtendremos la siguiente salida:
 ```
 
 ## Implementación del código de función
+
+Para que pueda redimensionar el tamaño lo implementaremos desde otro repositorio de GitHub:
+
+```Bash
+az functionapp deployment source config --name $functionapp --resource-group RG-WebApp --branch master --manual-integration --repo-url https://github.com/Azure-Samples/function-image-upload-resize
+```
+
+Obtendremos la siguiente salida:
+
+```Bash
+{
+  "branch": "master",
+  "deploymentRollbackEnabled": false,
+  "id": "/subscriptions/*******************/resourceGroups/RG-WebApp/providers/Microsoft.Web/sites/safunmat02t38w03/sourcecontrols/web",
+  "isManualIntegration": true,
+  "isMercurial": false,
+  "kind": null,
+  "location": "East US",
+  "name": "safunmat02t38w03",
+  "repoUrl": "https://github.com/Azure-Samples/function-image-upload-resize",
+  "resourceGroup": "RG-WebApp",
+  "type": "Microsoft.Web/sites/sourcecontrols"
+}
+```
+
+## Creación de una suscripción a evento
+
+A continuación deberemos de crear la suscripción al evento para que envíe las notificaciones al portal de Azure:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/mVH0yYv.png" title="suscripcion" /></a>
+</p>
+
+Dejaremos la configuración como se indica en la siguiente imagen:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/t6y1xQZ.png" title="source: imgur.com" /></a>
+</p>
