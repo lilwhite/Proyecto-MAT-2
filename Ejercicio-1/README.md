@@ -56,5 +56,11 @@ El grupo de acción que tenemos creado para asociar a la alerta, nos enviará un
 A continuación veremos la rececpción del correo al generarse una de las alertas. Accederemos con uno de los usuarios creados para el departamento de sistemas:
 
 <p align="center">
-<a><img src="https://i.imgur.com/5DDqD4Xh.png" title="sysmat" /></a>
+  <a><img src="https://i.imgur.com/5DDqD4Xh.png" title="sysmat" /></a>
+</p>
+
+Pasado un tiempo comprobaremos que recibimos un mensaje en nuestro buzón de correo:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/w7G7wMq.png" title="correo" /></a>
 </p>
