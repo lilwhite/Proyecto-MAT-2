@@ -9,7 +9,7 @@ from-webapp).
 
 ## Creación de cuenta de almacenamiento
 
-Primero procederemos a crear una cuenta de almacenamiento en la cual guardaremos las imágenes subidas a la aplicación web.
+Primero procederemos a crear una cuenta de almacenamiento mediante Azure CLI, en la cual guardaremos las imágenes subidas a la aplicación web.
 
 ```Bash
 blobStorageAccount=sawebmat02t38w03
