@@ -31,3 +31,9 @@ Una vez que finalice nos mostrará los estados de los trabajos realizados:
 <p align="center">
   <a><img src="https://i.imgur.com/D68pNfk.png" title="test" /></a>
 </p>
+
+Por último, limpiaremos los recursos generados por el test:
+
+<p align="center">
+  <a><img src="https://i.imgur.com/CfUyOGR.png" title="delete" /></a>
+</p>
