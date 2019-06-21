@@ -88,3 +88,9 @@ Finalmente nos mostrará el resumen:
 <p align="center">
 <a><img src="https://i.imgur.com/20QIftf.png" title="resumen" /></a>
 </p>
+
+Una vez haya finalizado el proceso nos aparecerá el check list de las operaciones realizadas:
+
+<p align="center">
+<a><img src="https://i.imgur.com/ujtZxA8.png" title="check" /></a>
+</p>
